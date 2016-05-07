@@ -1,0 +1,22 @@
+---
+galaxy_info:
+  author: Gerard Braad
+  description: Deploys a local instance of the C9 SDK
+  company: gbraad.nl
+  license: BSD
+  min_ansible_version: 1.2
+  platforms:
+  - name: EL
+    versions:
+    - all
+  - name: Fedora
+    versions:
+    - all
+  - name: Amazon
+    versions:
+    - all
+  galaxy_tags:
+  - cloud
+  - development
+  - web
+dependencies: []

@@ -1,0 +1,18 @@
+---
+- name: Install Git
+  yum: name=git state=installed
+
+- name: install the 'Development tools' package group
+  yum: name="@Development tools" state=present
+  
+- name: Install Glibc
+  yum: name=glibc-static state=installed
+ 
+- name: Install tmux
+  yum: name=tmux state=installed
+
+- name: Clone c9
+  git: repo=https://github.com/c9/core.git dest={{destination}}
+
+- name: Install c9 SDK
+  command: chdir={{destination}}/scripts ./install-sdk.sh
